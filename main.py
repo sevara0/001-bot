@@ -14,6 +14,19 @@ dp = Dispatcher()
 async def start(message:Message):
     await message.answer("hello world")
 
+@dp.message(Command("jardem"))
+async def jardem(message:Message):
+    await message.answer(f"admin @Kpakona")
+
+@dp.message(Command("admin"))
+async def admin(message:Message):
+    await message.answer(f"admin @Kpakona")
+
+@dp.message(Command("my"))
+async def my(message:Message):
+    await message.answer(f"my 😂")
+
+
 async def main():
     print("bot istedi...")
     await dp.start_polling(bot)
